@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EE08ED9-0248-4AEE-B8B5-4CFBD42C912C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetoReceitasDAvovo</RootNamespace>
+    <AssemblyName>ProjetoReceitasDAvovo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arquivo\SaveJson.cs" />
+    <Compile Include="Controller\ControllerPessoa.cs" />
+    <Compile Include="Controller\ProdutoController.cs" />
+    <Compile Include="Controller\ReceitasController.cs" />
+    <Compile Include="DAO\DAOpessoa.cs" />
+    <Compile Include="DAO\DAOproduto.cs" />
+    <Compile Include="DAO\DAOreceitas.cs" />
+    <Compile Include="Entidades\Ingredientes_ent.cs" />
+    <Compile Include="Entidades\Item.cs" />
+    <Compile Include="Entidades\PessoaCupons.cs" />
+    <Compile Include="Entidades\PessoaFornecedor.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\Receitas.cs" />
+    <Compile Include="ListStatic.cs" />
+    <Compile Include="View\frm_cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_cadastro.Designer.cs">
+      <DependentUpon>frm_cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_cadastfornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_cadastfornecedor.Designer.cs">
+      <DependentUpon>frm_cadastfornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_cupoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_cupoms.Designer.cs">
+      <DependentUpon>frm_cupoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_forneced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_forneced.Designer.cs">
+      <DependentUpon>frm_forneced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Pessoa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frm_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_menu.Designer.cs">
+      <DependentUpon>frm_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_receitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_receitas.Designer.cs">
+      <DependentUpon>frm_receitas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\frm_cadastro.resx">
+      <DependentUpon>frm_cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_cadastfornecedor.resx">
+      <DependentUpon>frm_cadastfornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_cupoms.resx">
+      <DependentUpon>frm_cupoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_forneced.resx">
+      <DependentUpon>frm_forneced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\frm_menu.resx">
+      <DependentUpon>frm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_receitas.resx">
+      <DependentUpon>frm_receitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brasileira.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\japonesa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italiana.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mexicana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastrojp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caderno-de-receitas-receitas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\boloDeFuba.jpg" />
+    <Content Include="Resources\canjicaDoce.jpg" />
+    <Content Include="Resources\paoDeQueijo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
